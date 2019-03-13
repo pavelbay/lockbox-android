@@ -146,24 +146,4 @@ open class LockboxApplication : Application() {
         }
         return device == "robolectric" && product == "robolectric"
     }
-
-    private class AdjustLifecycleCallbacks : ActivityLifecycleCallbacks {
-        override fun onActivityResumed(activity: Activity) {
-            Adjust.onResume()
-        }
-
-        override fun onActivityPaused(activity: Activity) {
-            Adjust.onPause()
-        }
-
-        override fun onActivityCreated(activity: Activity?, savedInstanceState: Bundle?) {}
-
-        override fun onActivityStarted(activity: Activity?) {}
-
-        override fun onActivityDestroyed(activity: Activity?) {}
-
-        override fun onActivitySaveInstanceState(activity: Activity?, outState: Bundle?) {}
-
-        override fun onActivityStopped(activity: Activity?) {}
-    }
 }
