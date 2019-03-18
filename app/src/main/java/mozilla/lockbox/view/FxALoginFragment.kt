@@ -25,7 +25,6 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import mozilla.lockbox.R
 import mozilla.lockbox.presenter.FxALoginPresenter
 import mozilla.lockbox.presenter.FxALoginView
-import mozilla.lockbox.support.isDebug
 
 @ExperimentalCoroutinesApi
 class FxALoginFragment : BackableFragment(), FxALoginView {
@@ -50,9 +49,9 @@ class FxALoginFragment : BackableFragment(), FxALoginView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (!isDebug()) {
+//        if (!isDebug()) {
             skipFxA.visibility = View.GONE
-        }
+//        }
         view.toolbar.setNavigationIcon(R.drawable.ic_close)
     }
 
