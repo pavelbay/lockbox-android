@@ -48,7 +48,12 @@ enum class TelemetryEventMethod {
     reset,
     sync,
     touch,
-    update_credentials
+    update_credentials,
+    autofill_single,
+    autofill_multiple,
+    autofill_cancel,
+    autofill_error,
+    autofill_filter
 }
 
 enum class TelemetryEventObject {
